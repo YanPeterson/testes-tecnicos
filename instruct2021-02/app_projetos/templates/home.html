@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Projetos</title>
+    <!-- Bootstrap CSS (opcional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Cadastro de Projetos</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <form id="projetoForm">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome do Projeto:</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Seu(s) pacote(s):</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="pacotes" placeholder="Digite um ou mais pacotes">
+                            <button class="btn btn-primary" type="button" id="btnAdicionarPacotes">Adicionar</button>
+                        </div>
+                        <div class="mb-3">
+                        <label class="form-label">Pacotes:</label>
+
+                     <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="versao" placeholder="Digite a versão do pacote">
+                            <button class="btn btn-primary" type="button" id="btnVersao">Adicionar</button>
+                        </div>
+
+                        <ul class="list-group mb-3" id="listaObjetos">
+                            <!-- Objetos serão adicionados aqui -->
+                        </ul>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Salvar Projeto</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-4" id="listaProjetos">
+            <h3>Projetos Cadastrados</h3>
+            <div class="list-group" id="projetosList">
+                <!-- Projetos serão listados aqui -->
+            </div>
+        </div>
+    </div>
